@@ -73,34 +73,34 @@ public class MainActivity extends Activity {
 		// TODO
 		//Display list
 		adapter = new CustomAdapter(this, R.layout.activity_customicon, title,
-				thumbnails);
+				thumbnails, paths);
 		listNames.setAdapter(adapter);
 		registerForContextMenu(listNames);
 		
 
-//		listNames.setOnItemClickListener(new OnItemClickListener() {
-//
-//			@Override
-//			public void onItemClick(AdapterView<?> parent, View view,
-//					int position, long id) {
-//				// TODO Auto-generated method stub
-//				
-//				String path = paths.get((int) id);
-//				File f = new File(path);
-//				//If file is of zero bytes 
-//				if (f.length() == 0) {
-//					Toast.makeText(MainActivity.this, "File is empty",
-//							Toast.LENGTH_SHORT).show();
-//				} else {
-//					//Display text in new activity if file > zero bytes
-//					Intent intent = new Intent(MainActivity.this, PdfTextActivity.class);
-//					intent.putExtra("Id", id);
-//					intent.putExtra("Path", path);
-//					Log.d("TAG", String.valueOf(id));
-//					startActivity(intent);
-//				}
-//			}
-//		});
+		listNames.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				
+				String path = paths.get((int) id);
+				File f = new File(path);
+				//If file is of zero bytes 
+				if (f.length() == 0) {
+					Toast.makeText(MainActivity.this, "File is empty",
+							Toast.LENGTH_SHORT).show();
+				} else {
+					//Display text in new activity if file > zero bytes
+					Intent intent = new Intent(MainActivity.this, PdfTextActivity.class);
+					intent.putExtra("Id", id);
+					intent.putExtra("Path", path);
+					Log.d("TAG", String.valueOf(id));
+					startActivity(intent);
+				}
+			}
+		});
 
 	}
 	@Override

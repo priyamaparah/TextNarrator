@@ -9,5 +9,6 @@
     <string name="text">Read as Text</string>
     <string name="pdf">Read as PDF</string>
     <string name="title_activity_display_pdf">DisplayPdf</string>
+    <string name="title_activity_bookmark">Bookmark</string>
 
 </resources>

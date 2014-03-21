@@ -33,6 +33,14 @@
             android:name="com.scu.textnarrator.DisplayPdf"
             android:label="@string/title_activity_display_pdf" >
         </activity>
+        <activity
+            android:name="com.scu.textnarrator.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.scu.textnarrator.Bookmark"
+            android:label="@string/title_activity_bookmark" >
+        </activity>
     </application>
 
 </manifest>
